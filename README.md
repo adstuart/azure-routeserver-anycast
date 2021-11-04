@@ -293,9 +293,10 @@ The above is proof of value/function only, a production grade implementation wou
 
 ## Future enhancement / work
 
-The concept of using ARS to originate Anycast addresses within Azure is a power one, which in the future will hopefully be leveraged by 1st-party and 3rd-party offering alike. Examples would include;
+The concept of using ARS to originate Anycast addresses within Azure is a powerful new tool in the Azure Networking toolkit, one which in the future will hopefully be leveraged by 1st-party and 3rd-party offerings alike. Examples could include;
 
-- Optimized open sourced based designs (iterating on the design presented in the scenario) to add a level of automation. For example linking state of ExaBGP announcement to reachability of backend server within HAProxy. (Similar: https://blog.plessis.info/blog/2020/02/11/haproxy-exabgp.html)
+- Optimized open sourced based designs (iterating on the design presented in the document) to add a level of automation. For example linking state of ExaBGP announcement to reachability of backend server within HAProxy. (Similar: https://blog.plessis.info/blog/2020/02/11/haproxy-exabgp.html)
 - Enterprise NVA vendors of reverse proxy solutions should look to offer reference architecture that integrate with Azure Route Server for Anycast based designs
+- Anycast based DNS designs to simplify hybrid Enterprise DNS designs
 
 
