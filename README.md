@@ -1,7 +1,5 @@
 # Azure Route Server - Anycast multi-region load balancing
 
-[[_TOC_]]
-
 ## Introduction
 
 ![](images/2021-11-04-14-53-15.png)
