@@ -302,7 +302,7 @@ PS C:\Users\Administrator> Invoke-RestMethod  9.9.9.9
 </html>
 ```
 
-Total fail-back time <5ms.
+Total fail-back time ~2-3s.
 
 ![](images/2021-11-04-14-14-37.png)
 
