@@ -25,6 +25,8 @@
 
 ![](images/2021-11-04-14-53-15.png)
 
+> :bulb: Looking for an Anycast design based on Azure Virtual WAN instead? Click [here](https://github.com/adstuart/azure-vwan-anycast).
+
 The subject of load balancing across Azure regions is a common topic within application design in the Cloud. Often in the context of providing HA or DR for an application hosted in Azure, but also for purposes of load sharing and/or blue-green deployments.
 
 If the source, remote endpoints (clients, APIs, etc), are accessing the applications from a public source (public IP, over the Internet) then we have well known patterns that many customers already use, comprised of products like Azure Front Door and Azure Traffic Manager – these products sit at the edge of the Microsoft network, and can therefore naturally intercept requests from clients on the Internet, before the traffic is passed to an Azure Region ([example](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/multi-region)).
@@ -312,7 +314,7 @@ The above is proof of value/function only, a production grade implementation wou
 
 ## Future enhancement / work
 
-The concept of using ARS to originate Anycast addresses within Azure is a powerful new tool in the Azure Networking toolkit, one which in the future will hopefully be leveraged by 1st-party and 3rd-party offerings alike. Examples could include;
+The concept of using Azure Route Server (and/or [Azure Virtual WAN BGP Peering](https://github.com/adstuart/azure-vwan-anycast))  to originate Anycast addresses within Azure is a powerful new tool in the Azure Networking toolkit, one which in the future will hopefully be leveraged by 1st-party and 3rd-party offerings alike. Examples could include;
 
 - Optimized open sourced based designs (iterating on the design presented in the document) to add a level of automation. For example linking state of ExaBGP announcement to reachability of backend server within HAProxy. (Similar: https://blog.plessis.info/blog/2020/02/11/haproxy-exabgp.html)
 - Enterprise NVA vendors of reverse proxy solutions should look to offer reference architecture that integrate with Azure Route Server for Anycast based designs
