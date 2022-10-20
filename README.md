@@ -74,7 +74,7 @@ neighbor 172.16.159.4 {
 	local-as 65010;
 	peer-as 65515;
 	static {
-	route 9.9.9.9/32 next-hop 172.16.156.70 as-path;
+	route 9.9.9.9/32 next-hop 172.16.156.70 as-path [];
 	}
 }
 neighbor 172.16.159.5 {
@@ -152,7 +152,7 @@ sudo apt install haproxy
 # Loopback IF
 sudo ifconfig lo:9 9.9.9.9 netmask 255.255.255.255 up
 # ExaBGP config
-vneighbor 172.16.139.4 {
+neighbor 172.16.139.4 {
 	router-id 172.16.136.70;
 	local-address 172.16.136.70;
 	local-as 65010;
